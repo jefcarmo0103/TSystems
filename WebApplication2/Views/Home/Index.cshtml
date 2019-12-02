@@ -1,0 +1,32 @@
+﻿@model List<WebApplication2.Utils.Response.LutadorResponse>
+@{
+    ViewBag.Title = "Campeonato de Artes Marciais";
+}
+
+<button id="init" type="button" class="btn btn-default">Iniciar</button>
+<hr/>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-xs-6 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@item.Nome</h3>
+                    <input type="checkbox" aria-label="..." value="@item.Id">
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Idade: @item.Idade</li>
+                        <li class="list-group-item">Lutas: @item.Lutas</li>
+                        <li class="list-group-item">Derrotas: @item.Derrotas</li>
+                        <li class="list-group-item">Vitorias: @item.Vitorias</li>
+                        <li class="list-group-item">Artes Marciais: @item.ArtesMarciais.Count</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
